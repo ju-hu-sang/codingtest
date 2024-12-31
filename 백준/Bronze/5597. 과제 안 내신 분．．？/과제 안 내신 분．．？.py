@@ -1,0 +1,5 @@
+stu_list = list(range(1,31))
+submit = list(int(input()) for _ in range(28))
+nosubmit = sorted(set(stu_list)-set(submit))
+print(nosubmit[0])
+print(nosubmit[1])
