@@ -1,15 +1,15 @@
-heights = [int(input()) for _ in range(9)]
-total_sum = sum(heights)
+ddongjaru = [int(input()) for _ in range(9)]
+ddongjaru_s = sum(ddongjaru)
 found = False
-for i in range(9):
-    for j in range(i + 1, 9):
-        
-        if total_sum - (heights[i] + heights[j]) == 100:
-            result = [heights[k] for k in range(9) if k != i and k != j]
+for i in range(len(ddongjaru)):
+    for j in range(i + 1, len(ddongjaru)):
+        if ddongjaru_s - (ddongjaru[i] + ddongjaru[j]) == 100:            
+            ddongjaru.pop(j)
+            ddongjaru.pop(i)
+            ddongjaru.sort()
+            for ddong in ddongjaru:
+                print(ddong)
             found = True
             break
     if found:
         break
-result.sort()
-for height in result:
-    print(height)
